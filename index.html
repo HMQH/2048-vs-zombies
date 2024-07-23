@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>2048 vs Zombies</title>
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <!-- 标题和分数 -->
+    <div class="heading">
+      <div class="title-container">
+        <!-- 新增减半卡槽 -->
+        <div class="occupySpace"></div>
+        <!-- <div class="card-slot">
+          <div class="half-card" draggable="true">减半卡</div>
+        </div>
+        <h1 class="title"><span class="a">2</span><span class="b">0</span>
+          <span class="c">4</span><span class="d">8</span>
+          <span class=" vs">vs</span><span class="zombiesname"> Zombies</span>
+        </h1> -->
+
+      </div>
+      <div class="scores-container">
+        <a class="restart-button">没发挥好？再来一局！</a>
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+        <div class="card-slot">
+          <div class="half-card" draggable="true">减半卡</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-container">
+      <!-- 结束游戏 -->
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+          <!-- 只有赢的时候才显示 -->
+          <a class="keep-playing-button">Keep going</a>
+          <!-- 赢和输的时候输的时候都显示 -->
+          <a class="retry-button">Try again</a>
+        </div>
+      </div>
+      <!-- 格子 -->
+      <div class="grid-container">
+        <!-- 从右到左，从上到下 -->
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+      <div class="tile-container">
+      </div>
+
+    </div>
+    <div class=" progress-container">
+      <img id="progress-empty" src="./image/Interface/FlagMeterEmpty.png" alt="Empty Progress Bar">
+      <img id="progress-full" src="./image/Interface/FlagMeterFull.png" alt="Empty Progress Bar">
+    </div>
+  </div>
+  <!-- 兼容性 -->
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <!-- 键盘输入 -->
+  <script src="js/keyboard_input_manager.js"></script>
+  <!-- 渲染 -->
+  <script src="js/html_actuator.js"></script>
+  <!-- 格子 -->
+  <script src="js/grid.js"></script>
+  <!-- 棋子 -->
+  <script src="js/tile.js"></script>
+  <!-- 子弹 -->
+  <script src="js/bullet.js"></script>
+  <!-- 僵尸 -->
+  <script src="js/Zombie.js"></script>
+  <!-- 本地存储 -->
+  <script src="js/local_storage_manager.js"></script>
+  <!-- 减半卡槽 -->
+  <script src="js/halfcard.js"></script>
+  <!-- 游戏管理 -->
+  <script src="js/game_manager.js"></script>
+  <!-- 游戏 -->
+  <script src="js/application.js"></script>
+</body>
+
+</html>
